@@ -27,21 +27,23 @@
       </div>
 
       <!-- Nav Item - Pages Collapse Menu -->
-      <li class="nav-item {{ Request::is('admin/category*') ? ' active' :  '' }} {{ Request::is('admin/product*') ? ' active' :  '' }}">
+      <li class="nav-item {{ Request::is('admin/desain*') ? ' active' :  '' }} {{ Request::is('admin/price*') ? ' active' :  '' }}">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
           <i class="fa fa-shopping-bag"></i>
-          <span>PRODUK</span>
+          <span>KATALOG</span>
         </a>
-        <div id="collapseTwo" class="collapse {{ Request::is('admin/category*') ? ' show' :  '' }} {{ Request::is('admin/product*') ? ' show' :  '' }}" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+        <div id="collapseTwo" class="collapse {{ Request::is('admin/desain*') ? ' show' :  '' }} {{ Request::is('admin/price*') ? ' show' :  '' }}" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">KATEGORI & PRODUK</h6>
-            <a class="collapse-item {{ Request::is('admin/category*') ? ' active' : '' }}" href="{{ route('admin.category.index') }}">KATEGORI</a>
+            <h6 class="collapse-header">HARGA & DESIGN</h6>
+            <a class="collapse-item {{ Request::is('admin/desain*') ? ' active' : '' }}" href="{{ route('admin.desain.index') }}">DESIGN</a>
 
-            <a class="collapse-item {{ Request::is('admin/product*') ? ' active' : '' }}" href="{{ route('admin.product.index') }}">PRODUK</a>
+            {{-- <a class="collapse-item {{ Request::is('admin/product*') ? ' active' : '' }}" href="{{ route('admin.product.index') }}">PRICE & BENEFITS</a> --}}
 
           </div>
         </div>
       </li>
+
+
 
       <div class="sidebar-heading">
         ORDERS
@@ -81,6 +83,7 @@
                 <span>USERS</span>
             </a>
         </li>
+
 
         <li class="nav-item {{ Request::is('admin/fitur*') ? ' active' :  '' }}">
             <a class="nav-link" href="{{ route('admin.fitur.index') }}">
