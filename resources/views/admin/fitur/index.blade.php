@@ -46,7 +46,7 @@
                                     <th scope="row" style="text-align: center">
                                         {{ ++$no + ($fiturs->currentPage()-1) * $fiturs->perPage() }}</th>
                                     <td>
-                                        <img src="{{ asset('img/' . $fitur->image) }}" class="rounded" style="width:200px; height:200px">
+                                        <img src="{{ $fitur->image }}" class="rounded" style="width:200px; height:200px">
                                     </td>
                                     <td>{{ $fitur->title }}</td>
                                     <td>{!! $fitur->content !!}</td>
